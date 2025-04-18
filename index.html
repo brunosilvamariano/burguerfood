@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pedido Online | HB Burger</title>
+
+  <!-- 🔤 Fontes do Google -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- 🎨 Estilos principais -->
+  <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/fonts/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+    <body>
+        <!-- ================================
+            ⛳ HEADER PRINCIPAL - HAMBURGUERIA
+        =================================== -->
+        <header>
+            <!-- Botão do menu hamburgueria -->
+            <!-- Ao clicar, o menu lateral é aberto (offcanvas) -->
+            <button id="menuToggle" class="menu-btn" aria-label="Abrir menu">
+                <i class="bi bi-list"></i> <!-- Ícone do menu -->
+            </button>
+            
+            <!-- Logo da hamburgueria, imagem central -->
+            <img src="./images/logo/logo.png" alt="Logo da Hamburgueria" class="logo" />
+        </header>
+        <!-- Navegação lateral (offcanvas) -->
+        <!-- Menu deslizante, que abre quando o botão do menu é clicado -->
+        <nav class="offcanvas" id="sideMenu" aria-labelledby="menuToggle">
+            <!-- Cabeçalho do menu lateral -->
+            <div class="offcanvas-header">
+                <!-- Imagem do logo no topo do menu lateral -->
+                <img src="./images/logo/logo.png" alt="Logo Hamburgueria" class="avatar" />
+                
+                <!-- Saudação ao usuário -->
+                <span>Bem-vindo, fã de hambúrguer!</span>
+                
+                <!-- Botão de fechar o menu lateral -->
+                <button id="closeBtn" aria-label="Fechar menu">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+
+            <!-- Lista de itens do menu -->
+            <ul class="menu">
+                <li><i class="bi bi-house-door"></i> <a href="#inicio">Início</a></li>
+                <li><i class="bi bi-box"></i> <a href="#produtos">Produtos</a></li>
+                <li><i class="bi bi-people"></i> <a href="#sobre">Sobre</a></li>
+                <li><i class="bi bi-envelope"></i> <a href="#contato">Contato</a></li>
+              </ul>
+        </nav>
+        <!-- Overlay para fechar o menu quando clicado fora -->
+        <div class="overlay" id="overlay" aria-hidden="true"></div>
+
+        
+    <!-- Scripts -->
+    <script src="/css/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/menuToggle.js"></script>
+    </body>
+</html>

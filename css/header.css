@@ -1,0 +1,28 @@
+/* ===============================
+   ⛳ HEADER PRINCIPAL
+   =============================== */
+
+   header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--spacing-md);
+    background-color: var(--color-burger-primary);
+    color: var(--btn-font-color);
+  }
+  
+  /* Logo (pode ser texto ou imagem) */
+  .logo {
+    font-size: var(--font-size-xl);
+    font-family: var(--font-title);
+    color: var(--btn-font-color);
+  }
+  
+  /* Botão do menu (hamburguer) */
+  .menu-btn {
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: var(--btn-font-color);
+    cursor: pointer;
+  }

@@ -1,0 +1,117 @@
+/* ============================================================
+   VARIÁVEIS GLOBAIS - TEMA BASE PARA TODO O PROJETO
+   ============================================================ */
+ /* ====================================================
+   🎨 Cores - Temas de Segmento
+   ==================================================== */
+
+:root {
+
+  /* Tema Hamburgueria */
+  --color-burger-primary: #f68b1e;           /* Laranja fosco */
+  --color-burger-secondary: #ff9d5c;         /* Laranja claro (mais suave) */
+  --color-burger-text: #212529;              /* Texto em cinza muito escuro (quase preto) */
+  --color-burger-background: #f4f4f4;        /* Fundo neutro e fosco, cinza claro */
+
+  /* Cores de fundo e bordas */
+  --color-burger-footer-background: #333333; /* Fundo do rodapé (cinza escuro) */
+  --color-burger-border: #d1d1d1;            /* Borda fosca e suave (cinza claro) */
+
+  /* Cores adicionais */
+  --color-burger-button-bg: #ff7f32;         /* Laranja queimado para botões */
+  --color-burger-button-hover: #e56b23;      /* Laranja mais escuro para hover */
+
+  /* Cores de texto */
+  --color-burger-title: #1e1e1e;             /* Títulos em um cinza escuro e suave */
+  --color-burger-subtitle: #666666;          /* Subtítulos em cinza médio */
+
+  /* Cores de sucesso, erro e aviso */
+  --color-success: #198754;                  /* Verde (sucesso) */
+  --color-error: #dc3545;                    /* Vermelho (erro) */
+  --color-warning: #ffc107;                  /* Amarelo (aviso) */
+
+  /* Borda e sombreamento */
+  --border-color: #dee2e6;                   /* Cinza claro para bordas */
+  --box-shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: 0 2px 10px rgba(0, 0, 0, 0.2);
+  
+  /* Cores de fundo alternativo */
+  --color-background-alt: #e1e1e1;           /* Um cinza bem suave para fundos alternativos */
+}
+
+/* ---------------------------
+   🖋️ FONTES
+----------------------------*/
+
+/* Tamanhos de fontes */
+:root {
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-xxl: 2rem;
+
+  /* Fontes personalizadas via Google Fonts */
+  --font-title: 'Playfair Display', serif;   /* Ideal para títulos elegantes */
+  --font-body: 'Inter', sans-serif;          /* Leitura limpa e moderna */
+  --font-button: 'Montserrat', sans-serif;   /* Destaque em botões e menus */
+}
+
+/* ---------------------------
+   🧮 ESPAÇAMENTO & LAYOUT
+----------------------------*/
+
+:root {
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
+
+  --border-radius-sm: 0.25rem;
+  --border-radius-md: 0.5rem;
+  --border-radius-lg: 1rem;
+  --border-radius-pill: 50rem;
+}
+
+/* ---------------------------
+   🔘 BOTÕES
+----------------------------*/
+
+:root {
+  --btn-padding: 0.6rem 1.2rem;
+  --btn-font-size: var(--font-size-sm);
+  --btn-font-color: #fff;                       /* Cor do texto do botão */
+  --btn-bg: var(--color-burger-primary);        /* Fundo do botão com a cor principal do tema */
+  --btn-hover-bg: var(--color-burger-button-hover); /* Fundo do botão ao passar o mouse (laranja mais escuro) */
+  --btn-border-radius: var(--border-radius-pill);   /* Borda arredondada (pill) */
+}
+/* ---------------------------
+   ✨ ANIMAÇÕES
+----------------------------*/
+
+:root {
+  --transition-fast: 0.2s ease-in-out;
+  --transition-medium: 0.4s ease;
+  --transition-slow: 0.8s ease;
+
+  --hover-lift: translateY(-4px);
+  --hover-scale: scale(1.05);
+}
+
+/* ---------------------------
+   🧩 APLICAÇÃO DAS FONTES
+----------------------------*/
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-title);
+}
+
+button, .btn {
+  font-family: var(--font-button);
+}

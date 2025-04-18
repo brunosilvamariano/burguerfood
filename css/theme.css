@@ -1,0 +1,74 @@
+/* ================================================
+   🌈 Temas Específicos por Segmento (body class)
+================================================ */
+
+/* Açaí */
+.theme-acai {
+    --color-primary: #6e1e91;
+    --color-secondary: #b479d9;
+    --color-background: #f8f0fa;
+  }
+  
+  /* Hamburgueria */
+  .theme-burger {
+    --color-primary: #f68b1e;
+    --color-secondary: #ffa45b;
+    --color-background: #fff4ec;
+  }
+  
+  /* Sorveteria */
+  .theme-sorvete {
+    --color-primary: #ffb6c1;
+    --color-secondary: #ffcdd2;
+    --color-background: #fff0f5;
+  }
+  
+  /* Pizzaria */
+  .theme-pizza {
+    --color-primary: #c0392b;
+    --color-secondary: #f1c40f;
+    --color-background: #fff5f0;
+  }
+  
+  /* Comida Japonesa */
+  .theme-japonesa {
+    --color-primary: #e74c3c;
+    --color-secondary: #2c3e50;
+    --color-background: #f9f9f9;
+  }
+  
+  /* Cafeteria */
+  .theme-cafeteria {
+    --color-primary: #6f4e37;
+    --color-secondary: #c1a57b;
+    --color-background: #fcf5ee;
+  }
+  
+  /* Doceria */
+  .theme-doceria {
+    --color-primary: #ff69b4;
+    --color-secondary: #ffe4e1;
+    --color-background: #fff5fa;
+  }
+  
+  /* Petshop */
+  .theme-petshop {
+    --color-primary: #4dabf7;
+    --color-secondary: #a5d8ff;
+    --color-background: #f0f9ff;
+  }
+  
+  /* Salada/Natural */
+  .theme-salada {
+    --color-primary: #27ae60;
+    --color-secondary: #2ecc71;
+    --color-background: #f0fff4;
+  }
+  
+  /* Lanchonete */
+  .theme-lanchonete {
+    --color-primary: #f39c12;
+    --color-secondary: #f8c471;
+    --color-background: #fffbe6;
+  }
+  
