@@ -1,0 +1,41 @@
+/* Ajustes para a logo */
+#logo {
+    width: 200px; /* Largura padrão da logo */
+    transition: width 0.3s ease; /* Transição suave ao redimensionar */
+  }
+  
+  /* Para telas com largura de até 1024px */
+  @media (max-width: 1024px) {
+    #logo {
+      width: 180px; /* Ajuste para telas maiores, como tablets */
+    }
+  }
+  
+  /* Para telas com largura de até 768px (tablets menores) */
+  @media (max-width: 768px) {
+    #logo {
+      width: 160px; /* Ajuste para tablets menores */
+    }
+  }
+  
+  /* Para telas com largura de até 425px */
+  @media (max-width: 425px) {
+    #logo {
+      width: 150px; /* Ajuste para dispositivos móveis maiores */
+    }
+  }
+  
+  /* Para telas com largura de até 375px */
+  @media (max-width: 375px) {
+    #logo {
+      width: 130px; /* Ajuste para dispositivos móveis pequenos */
+    }
+  }
+  
+  /* Para telas com largura de até 320px */
+  @media (max-width: 320px) {
+    #logo {
+      width: 120px; /* Ajuste para dispositivos móveis extremamente pequenos */
+    }
+  }
+  
