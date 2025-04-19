@@ -1,0 +1,57 @@
+/* 🔘 BOTÃO CUSTOMIZADO */
+.custom-btn {
+  position: relative;
+  background: transparent;
+  color: var(--color-burger-primary);
+  padding: var(--btn-padding);
+  border: 2px solid var(--color-burger-primary);
+  border-radius: var(--btn-radius);
+  font-size: var(--btn-font-size);
+  font-family: var(--font-button);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  overflow: hidden;
+  transition:
+    color var(--transition-medium),
+    border-color var(--transition-medium),
+    transform var(--transition-medium);
+}
+
+.custom-btn::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background: linear-gradient(45deg, var(--color-burger-primary), var(--color-burger-secondary));
+  border-radius: 50%;
+  z-index: 0;
+  transform: translate(-50%, -50%);
+  transition:
+    width var(--transition-medium),
+    height var(--transition-medium),
+    top var(--transition-medium),
+    left var(--transition-medium);
+}
+
+.custom-btn:hover::before {
+  width: 0;
+  height: 0;
+  top: 50%;
+  left: 50%;
+}
+
+.custom-btn:hover {
+  color: var(--btn-color);
+  border-color: var(--color-burger-button-hover);
+  transform: var(--hover-scale);
+  background: linear-gradient(135deg, var(--color-burger-primary), var(--color-burger-button-hover));
+  border: 2px solid var(--color-burger-button-hover);
+}
+
+.custom-btn:focus,
+.custom-btn:hover {
+  box-shadow: var(--box-shadow-dark);
+}

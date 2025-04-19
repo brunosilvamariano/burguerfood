@@ -1,0 +1,6 @@
+/* 🎡 CARROSSEL DE IMAGENS */
+.carousel-item img {
+  height: var(--carousel-img-height, 500px); /* Valor padrão caso a variável não seja definida */
+  object-fit: cover;
+  border-radius: var(--radius-lg);
+}

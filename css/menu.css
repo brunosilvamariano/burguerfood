@@ -3,29 +3,28 @@
 ================================== */
 
 .offcanvas {
-    background-color: #fff;
-    color: var(--color-burger-text);
-    font-family: var(--font-body);
+  background-color: #fff; /* Pode ser substituída por uma variável se quiser modo escuro futuramente */
+  color: var(--color-burger-text);
+  font-family: var(--font-body);
+}
+
+.offcanvas-title {
+  font-family: var(--font-title);
+  color: var(--color-burger-title);
+}
+
+.nav-link {
+  color: var(--color-burger-text);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+
+  &:hover {
+    color: var(--color-burger-primary);
   }
-  
-  .offcanvas-title {
-    font-family: var(--font-title);
-    color: var(--color-burger-title);
-  }
-  
-  .nav-link {
-    color: var(--color-burger-text);
-    font-weight: 500;
-    transition: var(--transition-fast);
-  
-    &:hover {
-      color: var(--color-burger-primary);
-    }
-  }
-  
-  .badge {
-    font-size: 0.75rem;
-    padding: 0.35em 0.6em;
-    border-radius: var(--radius-pill);
-  }
-  
+}
+
+.badge {
+  font-size: var(--font-size-xs); /* 0.75rem */
+  padding: var(--spacing-xs) var(--spacing-sm); /* 0.25rem 0.5rem */
+  border-radius: var(--radius-pill);
+}

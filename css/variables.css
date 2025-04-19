@@ -7,6 +7,8 @@
   --color-burger-secondary:      #ff9d5c;
   --color-burger-text:           #212529;
   --color-burger-bg:             #f4f4f4;
+  --color-burger-nav:           #f4f4f4;
+  --color-burger-body:           #4b4b4b;
 
   /* Extras: rodapé, bordas, botões, alertas */
   --color-burger-footer-bg:      #333333;
@@ -26,6 +28,18 @@
 
   --color-bg-alt:                #e1e1e1;
 
+    /* ——————————————————————————————————————————
+     🛰️ ICONE SOCIAL
+     —————————————————————————————————————————— */
+     --social-icon-size:           1.6rem;
+     --social-icon-padding:        var(--spacing-sm);     /* 0.6rem */
+     --social-icon-blur:           4px;
+     --social-icon-color:          rgba(0, 0, 0, 0.5);
+   
+     /* Cores oficiais das redes sociais */
+     --color-social-facebook:      #1877f2;
+     --color-social-instagram:     #e1306c;
+     --color-social-whatsapp:      #25d366;
 
   /* ——————————————————————————————————————————
      🖋️ TIPOGRAFIA

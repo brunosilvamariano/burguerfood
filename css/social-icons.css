@@ -1,0 +1,24 @@
+/* 🌐 ÍCONE DAS REDES SOCIAIS - ESTILO MINIMALISTA */
+.social-icon {
+  font-size:         var(--social-icon-size);
+  color:             var(--social-icon-color);
+  padding:           var(--social-icon-padding);
+  transition:        color var(--transition-medium),
+                     transform var(--transition-medium);
+  backdrop-filter:   blur(var(--social-icon-blur));
+}
+
+.social-icon.facebook:hover {
+  color:             var(--color-social-facebook);
+  transform:         var(--hover-scale);
+}
+
+.social-icon.instagram:hover {
+  color:             var(--color-social-instagram);
+  transform:         var(--hover-scale);
+}
+
+.social-icon.whatsapp:hover {
+  color:             var(--color-social-whatsapp);
+  transform:         var(--hover-scale);
+}

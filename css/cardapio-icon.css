@@ -1,0 +1,13 @@
+/* 🌐 ÍCONE DAS REDES SOCIAIS - CARDÁPIO */
+#cardapio {
+  font-size: var(--font-size-xl);
+  color: var(--btn-color);
+  transition:
+    transform var(--transition-medium),
+    color var(--transition-medium);
+}
+
+#cardapio:hover {
+  transform: var(--hover-scale);
+  color: var(--color-warning);
+}
