@@ -18,6 +18,8 @@
   --color-burger-title:          #1e1e1e;
   --color-burger-subtitle:       #666666;
 
+  --color-burger-text-default: #f5a661; /* Laranja suave para o texto normal */
+
   --color-success:               #198754;
   --color-error:                 #dc3545;
   --color-warning:               #ffc107;

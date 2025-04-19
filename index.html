@@ -40,26 +40,41 @@
     </head>
 <body style="background: var(--color-burger-nav);">
 
-  <!-- ======================= HEADER / NAVBAR ======================= -->
-  <header>
+    <!-- =======================
+        HEADER / NAVBAR FIXO
+    =========================== -->
+    <header>
+        <!-- NAVBAR SUPERIOR FIXA -->
         <nav class="navbar fixed-top shadow-sm">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="/images/logo/logo.svg" alt="Logotipo da BurgerPro" class="me-2" id="logo">
-            </a>
-            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menu">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-        </div>
+            <div class="container d-flex justify-content-between align-items-center">
+        
+                <!-- Logotipo -->
+                <a class="navbar-brand d-flex align-items-center" href="#">
+                    <img src="/images/logo/logo.svg" alt="Logotipo da BurgerPro" class="me-2" id="logo">
+                </a>
+        
+                <!-- Botão Hamburguer (visível apenas no mobile) -->
+                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+        
+            </div>
         </nav>
-
-        <!-- ======================= MENU OFFCANVAS (MOBILE) ======================= -->
+        <!-- =======================
+            MENU OFFCANVAS MOBILE
+        ============================ -->
         <nav class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+    
+            <!-- Cabeçalho do Offcanvas -->
             <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu BurgerPro</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
             </div>
+    
+            <!-- Corpo do Offcanvas -->
             <div class="offcanvas-body">
+        
+                <!-- 🔍 Barra de busca dentro do menu -->
                 <form class="search-bar d-flex align-items-center mb-3" role="search">
                     <div class="search-wrapper w-100">
                         <input type="search" class="form-control" id="searchInput" placeholder="Buscar no cardápio..." aria-label="Buscar">
@@ -68,64 +83,89 @@
                         </button>
                     </div>
                 </form>
-
+        
+                <!-- 📋 Lista de links do menu -->
                 <ul class="navbar-nav">
+        
+                    <!-- Links principais -->
                     <li class="nav-item mb-2"><a class="nav-link" href="#">Início</a></li>
+            
+                    <!-- Dropdown com categorias do cardápio -->
                     <li class="nav-item dropdown mb-2">
                         <a class="nav-link dropdown-toggle" href="#" id="cardapioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cardápio</a>
-                        <ul class="dropdown-menu" aria-labelledby="cardapioDropdown">
+                            <ul class="dropdown-menu" aria-labelledby="cardapioDropdown">
                             <li><a class="dropdown-item" href="#">Clássicos</a></li>
                             <li><a class="dropdown-item" href="#">Especiais</a></li>
                             <li><a class="dropdown-item" href="#">Acompanhamentos</a></li>
                             <li><a class="dropdown-item" href="#">Bebidas</a></li>
                         </ul>
                     </li>
+            
+                    <!-- Outros links -->
                     <li class="nav-item mb-2"><a class="nav-link" href="#">Promoções</a></li>
                     <li class="nav-item mb-2"><a class="nav-link" href="#">Sobre Nós</a></li>
                     <li class="nav-item mb-2"><a class="nav-link" href="#">Contato</a></li>
+            
+                    <!-- Divisor visual -->
                     <li><hr class="dropdown-divider"></li>
+            
+                    <!-- Carrinho de compras -->
                     <li class="nav-item mb-2">
                         <a class="nav-link d-flex align-items-center" href="#carrinho">
                         <i class="bi bi-cart-fill me-2"></i> Carrinho
-                        <span class="badge ms-auto">3</span>
+                        <span class="badge ms-auto">3</span> <!-- Pode ser dinâmico futuramente -->
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
-
-    <!-- ======================= CONTEÚDO PRINCIPAL ======================= -->
     <main class="pt-5 mt-5">
+        <!-- ================================
+             🍔 SEÇÃO HERO (INTRODUÇÃO)
+             Apresentação com texto, botão e redes sociais à esquerda,
+             e carrossel de imagens à direita.
+        ================================== -->
         <section class="hero-section container-fluid py-5">
             <div class="row align-items-center">
-
-                <!-- Texto e Redes Sociais -->
+    
+                <!-- 📢 TEXTO PRINCIPAL + REDES SOCIAIS -->
                 <aside class="col-md-4 text-center text-md-start px-4">
+                    <!-- Título e slogan -->
                     <div class="mb-4">
                         <h1 class="mb-3 burguer">🍔 BurgerPro</h1>
                         <p class="lead">O verdadeiro sabor artesanal entregue com carinho.</p>
                     </div>
+    
+                    <!-- Botão personalizado para acessar o cardápio -->
                     <a href="#cardapio" class="btn btn-primary mb-4 custom-btn">Ver Cardápio</a>
+    
+                    <!-- Ícones das redes sociais com classes específicas -->
                     <div class="social-icons d-flex justify-content-center justify-content-md-start gap-3" aria-label="Redes sociais">
                         <a href="#" class="social-icon facebook"><i class="bi bi-facebook"></i></a>
                         <a href="#" class="social-icon instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="social-icon whatsapp"><i class="bi bi-whatsapp"></i></a>
                     </div>
                 </aside>
-
-                <!-- Carrossel -->
+    
+                <!-- 🎡 CARROSSEL DE IMAGENS -->
                 <div class="col-md-8">
                     <figure class="mb-0">
                         <div id="burgerCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
                             <div class="carousel-inner rounded-4 shadow">
+                                <!-- Slide 1 -->
                                 <div class="carousel-item active">
-                                <img src="./images/banner/banner-home.jpg" class="d-block w-100" alt="Hambúrguer artesanal com carne grelhada e queijo derretido">
+                                    <img src="./images/banner/banner-home.jpg" class="d-block w-100"
+                                        alt="Hambúrguer artesanal com carne grelhada e queijo derretido">
                                 </div>
+                                <!-- Slide 2 -->
                                 <div class="carousel-item">
-                                <img src="/images/banner/banner-home2.jpg" class="d-block w-100" alt="Hambúrguer artesanal com cebola caramelizada e bacon crocante">
+                                    <img src="/images/banner/banner-home2.jpg" class="d-block w-100"
+                                        alt="Hambúrguer artesanal com cebola caramelizada e bacon crocante">
                                 </div>
                             </div>
+    
+                            <!-- Botões de navegação do carrossel -->
                             <button class="carousel-control-prev" type="button" data-bs-target="#burgerCarousel" data-bs-slide="prev" aria-label="Slide anterior">
                                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             </button>
@@ -133,12 +173,259 @@
                                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             </button>
                         </div>
+    
+                        <!-- Legenda apenas para leitores de tela -->
                         <figcaption class="visually-hidden">Galeria de hambúrgueres artesanais</figcaption>
                     </figure>
                 </div>
             </div>
         </section>
+
+     
+        <!-- ======================= INFO DO ESTABELECIMENTO ======================= -->
+        <section id="infoEstab" class="estab-info container my-4">
+            <div class="estab-card rounded-4 p-4 shadow-sm">
+                <!-- Identidade -->
+                <div class="d-flex align-items-center gap-3 mb-4">
+                    <img src="/images/logo/logo.svg" alt="Logo BurgerPro" class="logo-kim" />
+                    <div>
+                        <span class="text-muted small">⭐ 4.35 • Hamburgueria</span>
+                    </div>
+                </div>
+        
+                <!-- Mini‑Cards de info rápida -->
+                <div class="info-cards-container">
+                    <div class="info-card">
+                        <i class="bi bi-clock"></i>
+                        <h6>Delivery</h6>
+                        <p>30 ~ 50 min</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="bi bi-shop"></i>
+                        <h6>Retirada</h6>
+                        <p>5 ~ 15 min</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="bi bi-cash-coin"></i>
+                        <h6>Mínimo</h6>
+                        <p>R$ 25,00</p>
+                    </div>
+                </div>
+
+        
+                <!-- Frete grátis + Mais informações -->
+                <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
+                    <div class="badge text-bg-success px-3 py-1 rounded-pill fw-semibold" style="font-size:0.85rem;">
+                        🏷 Frete grátis acima de R$ 100
+                    </div>
+        
+                    <div class="mais-info d-flex justify-content-around">                   <!-- Lista de links para os modais -->
+                        <div class="info-links mt-4">
+                            <ul class="info-links-list d-flex justify-content-around flex-wrap gap-1">
+                                <li>
+                                    <button class="info-link" data-bs-toggle="modal" data-bs-target="#paymentModal">
+                                        <i class="bi bi-credit-card"></i> Formas de pagamento
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="info-link" data-bs-toggle="modal" data-bs-target="#taxModal">
+                                        <i class="bi bi-truck"></i> Taxas de entrega
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="info-link" data-bs-toggle="modal" data-bs-target="#scheduleModal">
+                                        <i class="bi bi-clock-history"></i> Horário e endereço
+                                    </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Modal: Formas de Pagamento -->
+        <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-scrollable modal-lg">
+                <div class="modal-content p-3">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="paymentModalLabel"><i class="bi bi-credit-card me-2"></i>Formas de Pagamento</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 class="mb-3">Pagamento no Delivery</h6>
+                        <div class="row g-3 mb-4">
+                            <!-- Cartões delivery -->
+                            <div class="col-6 col-md-3">
+                                <div class="payment-card text-center p-2 rounded-3">
+                                    <img src="/images/payments/dinheiro.png" alt="Dinheiro">
+                                    <p class="small mt-2 mb-0">Dinheiro</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="payment-card text-center p-2 rounded-3">
+                                    <img src="/images/payments/visa.png" alt="Visa Crédito">
+                                    <p class="small mt-2 mb-0">Visa Crédito</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="payment-card text-center p-2 rounded-3">
+                                    <img src="/images/payments/mastercard.png" alt="Mastercard Crédito">
+                                    <p class="small mt-2 mb-0">Mastercard Crédito</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="payment-card text-center p-2 rounded-3">
+                                    <img src="/images/payments/elo.png" alt="Elo Débito">
+                                    <p class="small mt-2 mb-0">Elo Débito</p>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <h6 class="mb-3">Pagamento na Retirada</h6>
+                        <div class="row g-3">
+                            <!-- Cartões retirada -->
+                            <div class="col-6 col-md-3">
+                                <div class="payment-card text-center p-2 rounded-3">
+                                    <img src="/images/payments/sodexo.png" alt="Sodexo">
+                                    <p class="small mt-2 mb-0">Sodexo Refeição</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="payment-card text-center p-2 rounded-3">
+                                    <img src="/images/payments/alelo.png" alt="Alelo">
+                                    <p class="small mt-2 mb-0">Alelo Refeição</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="payment-card text-center p-2 rounded-3">
+                                    <img src="/images/payments/ticket.png" alt="Ticket Restaurante">
+                                    <p class="small mt-2 mb-0">Ticket Restaurante</p>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-3">
+                                <div class="payment-card text-center p-2 rounded-3">
+                                    <img src="/images/payments/pix.png" alt="Pix">
+                                    <p class="small mt-2 mb-0">Pix</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal: Taxas de Entrega -->
+        <div class="modal fade" id="taxModal" tabindex="-1" aria-labelledby="taxModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content p-3">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="taxModalLabel"><i class="bi bi-truck me-2"></i>Taxas de Entrega</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="mb-1 fw-semibold">Tipo: <span class="text-success">Fixa</span></p>
+                        <p class="mb-1">Valor: <strong>R$ 4,00</strong></p>
+                        <small class="text-muted">Estimativa de tempo de entrega e a taxa cobrada para delivery é definida pelo estabelecimento.</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Modal: Horário de funcionamento + Endereço + Mapa -->
+        <div class="modal fade" id="scheduleModal" tabindex="-1" aria-labelledby="scheduleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content p-3">
+                    <div class="modal-header border-0">
+                        <h5 class="modal-title" id="scheduleModalLabel"><i class="bi bi-clock-history me-2"></i>Horário e Endereço</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body row g-4">
+                        <!-- Horário -->
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3">Horário de Funcionamento</h6>
+                            <ul class="list-unstyled">
+                                <li>Domingo: 10:30 às 14:00</li>
+                                <li>Segunda: 10:30 às 14:00</li>
+                                <li>Terça: 10:30 às 14:00</li>
+                                <li>Quarta: 10:30 às 14:00</li>
+                                <li>Quinta: 10:30 às 14:00</li>
+                                <li>Sexta: 10:30 às 14:00</li>
+                                <li>Sábado: 10:30 às 14:00</li>
+                            </ul>
+                        </div>
+        
+                        <!-- Endereço + Mapa -->
+                        <div class="col-md-6">
+                            <h6 class="fw-bold mb-3">Endereço</h6>
+                            <p class="mb-1">RUA ALMIRANTE BARROSO, 373 CENTRO</p>
+                            <p class="mb-1">AGUAI - SP</p>
+                            <p class="mb-3">CEP: 13860000</p>
+                            <div class="rounded-3 overflow-hidden border">
+                                <iframe
+                                    src="https://www.google.com/maps?q=RUA+ALMIRANTE+BARROSO,+373,+AGUAI,+SP&output=embed"
+                                    width="100%" height="200" style="border:0;" allowfullscreen=""
+                                    loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+  
+        <!-- ======================= DESTAQUES DO CARDÁPIO ======================= -->
+        <section class="destaques-section container py-5">
+        <div class="text-center mb-5">
+        <h2 class="section-title">🍟 Nossos Destaques</h2>
+        <p class="section-subtitle">Sabores que conquistam do primeiro ao último pedaço.</p>
+        </div>
+    
+        <div class="row g-4">
+    
+        <!-- Item 1 -->
+        <div class="col-md-4">
+            <div class="card card-produto h-100 text-center shadow-sm rounded-4">
+            <img src="/images/produtos/classico.jpg" class="card-img-top" alt="Hambúrguer Clássico">
+            <div class="card-body">
+                <h5 class="card-title">Burger Clássico</h5>
+                <p class="card-text">Pão artesanal, carne 180g, queijo cheddar e molho especial.</p>
+                <a href="#" class="btn btn-outline-primary">Pedir Agora</a>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Item 2 -->
+        <div class="col-md-4">
+            <div class="card card-produto h-100 text-center shadow-sm rounded-4">
+            <img src="/images/produtos/bacon.jpg" class="card-img-top" alt="Burger Bacon Supreme">
+            <div class="card-body">
+                <h5 class="card-title">Bacon Supreme</h5>
+                <p class="card-text">Duas carnes, muito bacon, cheddar derretido e cebola crispy.</p>
+                <a href="#" class="btn btn-outline-primary">Pedir Agora</a>
+            </div>
+            </div>
+        </div>
+    
+        <!-- Item 3 -->
+        <div class="col-md-4">
+            <div class="card card-produto h-100 text-center shadow-sm rounded-4">
+            <img src="/images/produtos/veggie.jpg" class="card-img-top" alt="Burger Veggie">
+            <div class="card-body">
+                <h5 class="card-title">Burger Veggie</h5>
+                <p class="card-text">Hambúrguer vegetal, mix de folhas e molho leve da casa.</p>
+                <a href="#" class="btn btn-outline-primary">Pedir Agora</a>
+            </div>
+            </div>
+        </div>
+    
+        </div>
+        </section>
+  
     </main>
+    
 
   <!-- ======================= RODAPÉ ======================= -->
   <footer class="text-center py-4 mt-5" style="background-color: var(--cor-navbar);">
@@ -149,5 +436,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/info-estab.js"></script>
 </body>
 </html>

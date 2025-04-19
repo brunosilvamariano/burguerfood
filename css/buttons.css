@@ -2,7 +2,7 @@
 .custom-btn {
   position: relative;
   background: transparent;
-  color: var(--color-burger-primary);
+  color: var(--color-burger-text-default); /* <- cor mais suave (laranja claro) */
   padding: var(--btn-padding);
   border: 2px solid var(--color-burger-primary);
   border-radius: var(--btn-radius);
@@ -15,7 +15,8 @@
   transition:
     color var(--transition-medium),
     border-color var(--transition-medium),
-    transform var(--transition-medium);
+    transform var(--transition-medium),
+    background var(--transition-medium);
 }
 
 .custom-btn::before {
@@ -44,7 +45,7 @@
 }
 
 .custom-btn:hover {
-  color: var(--btn-color);
+  color: var(--btn-color); /* <- branco no hover */
   border-color: var(--color-burger-button-hover);
   transform: var(--hover-scale);
   background: linear-gradient(135deg, var(--color-burger-primary), var(--color-burger-button-hover));
