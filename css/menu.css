@@ -1,83 +1,31 @@
-/* ===============================
-   📋 MENU OFFCANVAS (LATERAL)
-   =============================== */
+/* ================================
+   🧭 MENU OFFCANVAS
+================================== */
 
-   .offcanvas {
-    position: fixed;
-    top: 0;
-    left: -300px;
-    width: 280px;
-    height: 100vh;
-    background: var(--color-burger-background);
-    padding: var(--spacing-md);
-    box-shadow: var(--box-shadow-dark);
-    transition: left var(--transition-medium);
-    z-index: 1000;
-  }
-  
-  /* Menu ativo (visível) */
-  .offcanvas.active {
-    left: 0;
-  }
-  
-  /* Cabeçalho do menu lateral */
-  .offcanvas-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  /* Avatar do menu */
-  .avatar {
-    width: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  /* ===============================
-     📂 LISTA DE LINKS DO MENU
-     =============================== */
-  
-  .menu {
-    list-style: none;
-    margin-top: var(--spacing-lg);
-  }
-  
-  .menu li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: var(--spacing-sm);
-    font-size: var(--font-size-base);
+.offcanvas {
+    background-color: #fff;
     color: var(--color-burger-text);
-    cursor: pointer;
-    transition: background var(--transition-fast);
-    border-radius: var(--border-radius-md);
+    font-family: var(--font-body);
   }
   
-  .menu li:hover {
-    background: var(--color-background-alt);
+  .offcanvas-title {
+    font-family: var(--font-title);
+    color: var(--color-burger-title);
   }
   
-  /* ===============================
-     🕶️ OVERLAY ESCURECEDOR
-     =============================== */
+  .nav-link {
+    color: var(--color-burger-text);
+    font-weight: 500;
+    transition: var(--transition-fast);
   
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    opacity: 0;
-    visibility: hidden;
-    transition: all var(--transition-fast);
-    z-index: 900;
+    &:hover {
+      color: var(--color-burger-primary);
+    }
   }
   
-  .overlay.active {
-    opacity: 1;
-    visibility: visible;
+  .badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.6em;
+    border-radius: var(--radius-pill);
   }
   

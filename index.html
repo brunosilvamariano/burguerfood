@@ -1,66 +1,150 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+  <!-- =======================
+      Metadados Básicos
+  =========================== -->
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pedido Online | HB Burger</title>
 
-  <!-- 🔤 Fontes do Google -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;500&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <!-- =======================
+      SEO
+  =========================== -->
+  <meta name="description" content="BurgerPro — Pedido online de hambúrgueres artesanais com entrega rápida e retirada no local.">
+  <meta name="keywords" content="hamburguer, pedido online, lanche, entrega, BurgerPro">
+  <meta name="author" content="BurgerPro Inc.">
+  <meta name="robots" content="index, follow">
 
-  <!-- 🎨 Estilos principais -->
-  <link rel="stylesheet" href="/css/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="/fonts/bootstrap-icons/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css">
+  <!-- =======================
+      Redes Sociais
+  =========================== -->
+  <meta property="og:title" content="BurgerPro • Pedido Online de Hamburgueria">
+  <meta property="og:description" content="Peça seus hambúrgueres artesanais online, com entrega rápida ou retirada.">
+  <meta property="og:image" content="/images/og-image.jpg">
+  <meta property="og:url" content="https://www.burgerpro.com.br">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BurgerPro • Pedido Online">
+  <meta name="twitter:description" content="Peça já seus hambúrgueres online.">
+  <meta name="twitter:image" content="/images/twitter-card.jpg">
+
+  <!-- =======================
+      Tema / Favicon
+  =========================== -->
+  <meta name="theme-color" content="#ff5722">
+  <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+
+  <!-- =======================
+      Título
+  =========================== -->
+  <title>BurgerPro • Pedido Online de Hamburgueria</title>
+
+  <!-- =======================
+      Estilos e Fontes
+  =========================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
+  <!-- Seu CSS personalizado -->
   <link rel="stylesheet" href="css/main.css">
 </head>
-
-    <body>
-        <!-- ================================
-            ⛳ HEADER PRINCIPAL - HAMBURGUERIA
-        =================================== -->
-        <header>
-            <!-- Botão do menu hamburgueria -->
-            <!-- Ao clicar, o menu lateral é aberto (offcanvas) -->
-            <button id="menuToggle" class="menu-btn" aria-label="Abrir menu">
-                <i class="bi bi-list"></i> <!-- Ícone do menu -->
+<body>
+    <!-- ========== HEADER / NAVBAR PRINCIPAL ========== -->
+    <header>
+        <nav class="navbar navbar-light fixed-top shadow-sm" style="background-color: var(--cor-navbar);">
+        <div class="container d-flex justify-content-between align-items-center">
+    
+            <!-- Logo da marca -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="/images/logo/logo.svg" alt="Logotipo da BurgerPro" width="200" class="me-2">
+            </a>
+    
+            <!-- Botão Hamburguer (Mobile) -->
+            <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menu">
+            <span class="navbar-toggler-icon"></span>
             </button>
-            
-            <!-- Logo da hamburgueria, imagem central -->
-            <img src="./images/logo/logo.png" alt="Logo da Hamburgueria" class="logo" />
-        </header>
-        <!-- Navegação lateral (offcanvas) -->
-        <!-- Menu deslizante, que abre quando o botão do menu é clicado -->
-        <nav class="offcanvas" id="sideMenu" aria-labelledby="menuToggle">
-            <!-- Cabeçalho do menu lateral -->
-            <div class="offcanvas-header">
-                <!-- Imagem do logo no topo do menu lateral -->
-                <img src="./images/logo/logo.png" alt="Logo Hamburgueria" class="avatar" />
-                
-                <!-- Saudação ao usuário -->
-                <span>Bem-vindo, fã de hambúrguer!</span>
-                
-                <!-- Botão de fechar o menu lateral -->
-                <button id="closeBtn" aria-label="Fechar menu">
-                    <i class="bi bi-x-lg"></i>
-                </button>
-            </div>
-
-            <!-- Lista de itens do menu -->
-            <ul class="menu">
-                <li><i class="bi bi-house-door"></i> <a href="#inicio">Início</a></li>
-                <li><i class="bi bi-box"></i> <a href="#produtos">Produtos</a></li>
-                <li><i class="bi bi-people"></i> <a href="#sobre">Sobre</a></li>
-                <li><i class="bi bi-envelope"></i> <a href="#contato">Contato</a></li>
-              </ul>
+    
+            <!-- Ícone do Carrinho (Visível no Desktop) -->
+            <a href="#carrinho" class="position-relative text-dark d-none d-md-block">
+            <i class="bi bi-cart-fill fs-4"></i>
+            <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                3
+                <span class="visually-hidden">Itens no carrinho</span>
+            </span>
+            </a>
+        </div>
         </nav>
-        <!-- Overlay para fechar o menu quando clicado fora -->
-        <div class="overlay" id="overlay" aria-hidden="true"></div>
+    
+        <!-- ========== MENU OFFCANVAS (Mobile) ========== -->
+        <nav class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <!-- Cabeçalho do Offcanvas -->
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu BurgerPro</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
+        </div>
+    
+        <!-- Itens do Menu Offcanvas -->
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+            <li class="nav-item mb-2"><a class="nav-link" href="#" aria-current="page">Início</a></li>
+    
+            <li class="nav-item dropdown mb-2">
+                <a class="nav-link dropdown-toggle" href="#" id="cardapioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Cardápio
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="cardapioDropdown">
+                <li><a class="dropdown-item" href="#">Clássicos</a></li>
+                <li><a class="dropdown-item" href="#">Especiais</a></li>
+                <li><a class="dropdown-item" href="#">Acompanhamentos</a></li>
+                <li><a class="dropdown-item" href="#">Bebidas</a></li>
+                </ul>
+            </li>
+    
+            <li class="nav-item mb-2"><a class="nav-link" href="#">Promoções</a></li>
+            <li class="nav-item mb-2"><a class="nav-link" href="#">Sobre Nós</a></li>
+            <li class="nav-item mb-2"><a class="nav-link" href="#">Contato</a></li>
+    
+            <li><hr class="dropdown-divider"></li>
+    
+            <li class="nav-item mb-2">
+                <a class="nav-link d-flex align-items-center" href="#carrinho">
+                <i class="bi bi-cart-fill me-2"></i> Carrinho
+                <span class="badge bg-danger ms-auto">3</span>
+                </a>
+            </li>
+            </ul>
+        </div>
+        </nav>
+    </header>
+  
+  <!-- =======================
+      CONTEÚDO PRINCIPAL
+  =========================== -->
+  <main class="pt-5 mt-5">
+    <section class="container text-center py-5">
+      <h1 class="mb-3">Bem-vindo à BurgerPro 🍔</h1>
+      <p class="lead mb-4">Peça seu hambúrguer artesanal com praticidade e sabor!</p>
+      <a href="#cardapio" class="btn btn-lg" style="background-color: var(--cor-primaria); color: #fff;">Ver Cardápio</a>
+    </section>
+  </main>
 
-        
-    <!-- Scripts -->
-    <script src="/css/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="./js/main.js"></script>
-    <script src="./js/menuToggle.js"></script>
-    </body>
+  <!-- =======================
+      FOOTER
+  =========================== -->
+  <footer class="text-center py-4 mt-5" style="background-color: var(--cor-navbar);">
+    <p class="mb-0">&copy; 2025 BurgerPro. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- =======================
+      SCRIPTS
+  =========================== -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
 </html>
