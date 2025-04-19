@@ -1,0 +1,86 @@
+/* ================================
+   🔍 SEARCH BAR
+================================== */
+.search-bar {
+  position: relative;
+  width: 100%;
+  max-width: 350px; /* Tamanho ajustável */
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: var(--btn-radius);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.search-wrapper input {
+  width: 100%;
+  padding: 10px 35px 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+.search-wrapper input:focus {
+  border-color: var(--color-burger-primary, #ff5722); /* Personalize a cor do foco */
+}
+
+.search-wrapper input::placeholder {
+  color: #999;
+  font-style: italic;
+}
+
+/* Ícone de lupa */
+.btn-search {
+  position: absolute;
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: var(--color-burger-primary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.search-bar .btn-search:hover {
+  color: var(--btn-hover-bg);
+}
+
+/* Ícone "X" para limpar */
+#clearBtn {
+  display: none; /* Inicialmente escondido */
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+#clearBtn:hover {
+  color: #333;
+}
+
+/* Ícone de lupa */
+#searchIcon {
+  display: block; /* Exibe o ícone de lupa por padrão */
+}
+
+/* ================================
+   🔄 RESPONSIVO
+================================== */
+@media (max-width: 768px) {
+  .search-bar {
+    max-width: 300px;
+  }
+}
