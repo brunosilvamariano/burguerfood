@@ -1,9 +1,11 @@
 @import url('./variables.css');
 @import url('./cardapio-icon.css');
+@import url('./cardapio.css');
 @import url('./layout.css');
-@import url('./cardapio-icon.css');
 @import url('./header.css');
+@import url('./categorias.css');
 @import url('./info.estab.css');
+@import url('./.alert-dismissible');
 @import url('./menu.css');
 @import url('./buttons.css');
 @import url('./social-icons.css');

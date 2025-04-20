@@ -1,43 +1,110 @@
-/* Ajustes para a logo */
-#logo {
-  width: 200px; /* Largura padrão da logo */
-  transition: width 0.3s ease; /* Transição suave ao redimensionar */
+/* ================================
+   📱 RESPONSIVIDADE COMPLETA
+   Telas: 1440, 1024, 768, 425, 375, 320
+================================== */
+
+/* 1440px - Telas grandes */
+@media (max-width: 1440px) {
+  #logo {
+    max-width: 160px;
+  }
 }
 
-/* Para telas com largura de até 1024px */
+/* 1024px - Tablets paisagem */
 @media (max-width: 1024px) {
+  header h1 {
+    font-size: 2.2rem;
+  }
+
+  header p {
+    font-size: 1.1rem;
+  }
+
+  .search-bar {
+    max-width: 320px;
+  }
+
   #logo {
-    width: 180px; /* Ajuste para telas maiores, como tablets */
+    max-width: 140px;
   }
 }
 
-/* Para telas com largura de até 768px (tablets menores) */
+/* 768px - Tablets retrato e menor */
 @media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .search-bar {
+    max-width: 280px;
+  }
+
   #logo {
-    width: 160px; /* Ajuste para tablets menores */
+    max-width: 130px;
   }
 }
 
-/* Para telas com largura de até 425px */
+/* 425px - Celulares grandes */
 @media (max-width: 425px) {
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header p {
+    font-size: 0.95rem;
+  }
+
+  .search-bar {
+    max-width: 250px;
+  }
+
   #logo {
-    width: 150px; /* Ajuste para dispositivos móveis maiores */
+    max-width: 120px;
   }
 }
 
-/* Para telas com largura de até 375px */
+/* 375px - iPhones comuns */
 @media (max-width: 375px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .search-bar {
+    max-width: 230px;
+  }
+
   #logo {
-    width: 130px; /* Ajuste para dispositivos móveis pequenos */
+    max-width: 110px;
   }
 }
 
-/* Para telas com largura de até 320px */
+/* 320px - Dispositivos menores */
 @media (max-width: 320px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  header p {
+    font-size: 0.85rem;
+  }
+
+  .search-bar {
+    max-width: 210px;
+  }
+
   #logo {
-    width: 120px; /* Ajuste para dispositivos móveis extremamente pequenos */
+    max-width: 100px;
   }
 }
+
 
 /* Mantém proporção para o carrossel mesmo em telas pequenas */
 .carousel-inner {
@@ -101,79 +168,72 @@ height: 100%;
 }
 
 
-/* Respostas para telas pequenas */
+/* ========================================
+ Responsividade Adicional para outras telas
+======================================== */
+
+/* ========================================
+   📱 Responsividade
+======================================== */
+
 @media (max-width: 1440px) {
-.estab-info h5 {
-  font-size: var(--font-size-lg);
-}
-.estab-info .info-card {
-  padding: var(--spacing-md);
-}
-.estab-info .estab-card {
-  padding: var(--spacing-lg);
-}
+  .info-card i {
+    font-size: 1.8rem;
+  }
 }
 
 @media (max-width: 1024px) {
-.estab-info h5 {
-  font-size: var(--font-size-lg);
-}
-.estab-info .info-card {
-  padding: var(--spacing-sm);
-}
-.estab-info .estab-card {
-  padding: var(--spacing-md);
-}
+  .info-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (max-width: 768px) {
-.estab-info .info-card,
-.payment-card {
-  padding: var(--spacing-sm);
-}
-.estab-info .mais-info button {
-  padding: var(--btn-padding);
-}
-#scheduleModal .modal-body {
-  grid-template-columns: 1fr;
-}
+  .info-cards-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .info-card i {
+    font-size: 1.6rem;
+  }
+
+  .modal-dialog.modal-lg {
+    max-width: 95%;
+  }
 }
 
 @media (max-width: 425px) {
-.estab-info .estab-card {
-  padding: var(--spacing-sm);
-}
-.estab-info .info-card {
-  padding: var(--spacing-sm);
-}
-.modal-body {
-  padding: var(--spacing-sm);
-}
+  .info-cards-container {
+    grid-template-columns: 1fr;
+  }
+
+  .info-link {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 375px) {
-.estab-info .estab-card {
-  padding: var(--spacing-xs);
-}
-.estab-info h5 {
-  font-size: var(--font-size-sm);
-}
-.estab-info .info-card {
-  padding: var(--spacing-xs);
-}
+  .estab-card .logo-kim {
+    width: 60px;
+  }
+
+  .info-card i {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 320px) {
-.estab-info .estab-card {
-  padding: var(--spacing-xs);
-}
-.estab-info h5 {
-  font-size: var(--font-size-xs);
-}
-.estab-info .info-card {
-  padding: var(--spacing-xs);
-}
-.estab-info .mais-info button {
-  font-size: var(--font-size-xs);
-}
+  .info-card {
+    padding: var(--spacing-sm);
+  }
+
+  .info-card h6,
+  .info-link,
+  .modal-body p {
+    font-size: var(--font-size-sm);
+  }
+
+  .info-card i {
+    font-size: 1.3rem;
+  }
 }

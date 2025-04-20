@@ -1,14 +1,16 @@
 /* ========================================
-   Estilos para a Seção de Informações do Estabelecimento
+   📦 Seção: Informações do Estabelecimento
 ======================================== */
+
 .estab-info {
-  margin-top: 40px;
+  margin-top: var(--spacing-lg);
 }
 
 .estab-card {
   background-color: #fff;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--box-shadow-dark);
+  padding: var(--spacing-md);
 }
 
 .estab-card .logo-kim {
@@ -17,115 +19,143 @@
 }
 
 .estab-card .text-muted {
-  font-size: 0.875rem;
+  font-size: var(--font-size-sm);
+  color: var(--color-burger-subtitle);
+  font-family: var(--font-body);
 }
 
+/* Grid principal dos cards */
 .info-cards-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  margin-bottom: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
 }
 
+/* Cada card de informação */
 .info-card {
-  background-color: #f8f9fa;
-  padding: 15px;
-  border-radius: 10px;
+  background-color: var(--color-bg-alt);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
   text-align: center;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  box-shadow: var(--box-shadow-light);
+  transition: transform var(--transition-fast);
 }
 
 .info-card:hover {
-  transform: translateY(-5px);
+  transform: var(--hover-lift);
 }
 
 .info-card i {
   font-size: 2rem;
-  color: #ff7f32; /* Cor vibrante para destaque */
+  color: var(--color-burger-primary);
 }
 
 .info-card h6 {
-  font-size: 1rem;
-  margin-top: 10px;
+  font-size: var(--font-size-base);
+  margin-top: var(--spacing-sm);
   font-weight: bold;
+  font-family: var(--font-title);
 }
 
 .info-card p {
-  font-size: 0.875rem;
-  color: #666;
+  font-size: var(--font-size-sm);
+  color: var(--color-burger-subtitle);
+  font-family: var(--font-body);
 }
 
 .badge {
-  font-size: 0.9rem;
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
+  background-color: var(--color-burger-button-bg);
+  color: white;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
 }
 
+/* Container com botões "Mais informações" */
 .mais-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  margin-top: var(--spacing-md);
 }
 
-/* Estilização da lista de links para os modais */
+/* Links para modais */
 .info-links {
-  margin-top: 20px;
+  margin-top: var(--spacing-md);
 }
 
 .info-links-list {
   display: flex;
   justify-content: space-around;
-  gap: 20px;
   flex-wrap: wrap;
 }
 
 .info-link {
   display: flex;
   align-items: center;
-  color: #333;
-  font-size: 1rem;
+  color: var(--color-burger-text);
+  font-size: var(--font-size-base);
   background: none;
   border: none;
-  padding: 10px;
+  padding: var(--spacing-sm);
   text-align: left;
-  transition: color 0.3s, transform 0.2s;
+  transition: color var(--transition-fast), transform var(--transition-fast);
 }
 
 .info-link:hover {
-  color: #ff7f32;
+  color: var(--color-burger-button-hover);
   transform: translateX(5px);
 }
 
 .info-link i {
   font-size: 1.3rem;
-  color: #ff7f32;
-  margin-right: 8px;
+  color: var(--color-burger-button-bg);
+  margin-right: var(--spacing-xs);
 }
 
 /* ========================================
- Modal Estilos
+   🪟 Modal
 ======================================== */
+
 .modal-header {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 10px;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-sm);
 }
 
 .modal-title {
-  font-size: 1.25rem;
+  font-size: var(--font-size-lg);
+  font-weight: bold;
+  font-family: var(--font-title);
+}
+
+.modal-body h6 {
+  font-size: var(--font-size-lg);
+  margin-bottom: var(--spacing-md);
   font-weight: bold;
 }
 
+.modal-body p {
+  font-size: var(--font-size-base);
+  color: var(--color-burger-text);
+}
+
+.modal-body small {
+  color: var(--color-burger-subtitle);
+}
+
 .payment-card {
-  background-color: #f8f9fa;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
+  background-color: var(--color-bg-alt);
+  padding: var(--spacing-md);
+  border-radius: var(--radius-md);
+  box-shadow: var(--box-shadow-light);
+  transition: transform var(--transition-fast);
+  text-align: center;
 }
 
 .payment-card:hover {
-  transform: translateY(-5px);
+  transform: var(--hover-lift);
 }
 
 .payment-card img {
@@ -134,60 +164,30 @@
 }
 
 .payment-card p {
-  margin-top: 10px;
-  font-size: 0.875rem;
-  color: #666;
+  margin-top: var(--spacing-sm);
+  font-size: var(--font-size-sm);
+  color: var(--color-burger-subtitle);
 }
 
-.modal-body h6 {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  font-weight: bold;
-}
-
-.modal-body p {
-  font-size: 1rem;
-  color: #333;
-}
-
-.modal-body small {
-  color: #777;
-}
-
-/* Estilos para a seção de horário e endereço */
+/* Horário e Endereço */
 .modal-body .row {
   display: flex;
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg);
 }
 
 .modal-body .col-md-6 {
-  flex: 1;
+  flex: 1 1 100%;
 }
 
 ul.list-unstyled li {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 8px;
+  font-size: var(--font-size-sm);
+  color: var(--color-burger-text);
+  margin-bottom: var(--spacing-xs);
 }
 
 iframe {
   width: 100%;
-  border-radius: 8px;
+  border-radius: var(--radius-md);
 }
 
-/* ========================================
- Responsividade
-======================================== */
-@media (max-width: 768px) {
-  .info-cards-container {
-      grid-template-columns: repeat(2, 1fr);
-  }
-
-  .info-card i {
-      font-size: 1.8rem;
-  }
-
-  .modal-dialog.modal-lg {
-      max-width: 90%;
-  }
-}

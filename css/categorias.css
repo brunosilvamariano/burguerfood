@@ -1,0 +1,86 @@
+/* ==================== Categorias e Menu Completo ==================== */
+#cardapio-categorias .nav-tabs {
+    border-bottom: 2px solid var(--color-burger-border);
+  }
+  
+  #cardapio-categorias .nav-link {
+    color: var(--color-burger-text);
+    font-size: var(--font-size-lg);
+    font-family: var(--font-title);
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+  
+  #cardapio-categorias .nav-link.active {
+    background-color: var(--color-burger-primary);
+    color: #fff;
+    border-color: var(--color-burger-primary);
+  }
+  
+  .card-body {
+    padding: var(--spacing-md);
+  }
+  
+  .combo-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: var(--color-burger-primary);
+    color: white;
+    padding: 5px 10px;
+    border-radius: var(--radius-sm);
+    font-size: var(--font-size-xs);
+    font-family: var(--font-body);
+  }
+  
+  .produto-card {
+    border-radius: var(--radius-md);
+    box-shadow: var(--box-shadow-light);
+    transition: transform var(--transition-medium);
+    background-color: var(--color-burger-bg);
+    border: 1px solid var(--color-burger-border);
+  }
+  
+  .produto-card:hover {
+    transform: var(--hover-lift);
+  }
+  
+  .produto-card img {
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .produto-card .card-title {
+    font-family: var(--font-body);
+    font-size: var(--font-size-lg);
+    color: var(--color-burger-title);
+    margin-bottom: var(--spacing-xs);
+  }
+  
+  .produto-card .card-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-burger-subtitle);
+  }
+  
+  .produto-card .preco {
+    font-weight: bold;
+    color: var(--color-burger-primary);
+    font-size: var(--font-size-base);
+  }
+  
+  .btn-add {
+    font-family: var(--font-button);
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    padding: var(--btn-padding);
+    font-size: var(--btn-font-size);
+    border-radius: var(--btn-radius);
+    transition: background-color var(--transition-fast);
+  }
+  
+  .btn-add:hover {
+    background-color: var(--btn-hover-bg);
+  }
+  

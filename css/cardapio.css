@@ -1,0 +1,176 @@
+/* ==================== Destaques do Cardápio ==================== */
+.produto-card {
+    border-radius: var(--radius-md);
+    box-shadow: var(--box-shadow-light);
+    transition: transform var(--transition-medium);
+    background-color: var(--color-burger-bg);
+    border: 1px solid var(--color-burger-border);
+  }
+  .produto-card:hover {
+    transform: var(--hover-lift);
+  }
+  .produto-card img {
+    border-top-left-radius: var(--radius-md);
+    border-top-right-radius: var(--radius-md);
+    height: 180px;
+    object-fit: cover;
+  }
+  .produto-card .card-title {
+    font-family: var(--font-body);
+    font-size: var(--font-size-lg);
+    color: var(--color-burger-title);
+    margin-bottom: var(--spacing-xs);
+  }
+  .produto-card .card-text {
+    font-size: var(--font-size-sm);
+    color: var(--color-burger-subtitle);
+  }
+  .produto-card .preco {
+    font-weight: bold;
+    color: var(--color-burger-primary);
+    font-size: var(--font-size-base);
+  }
+  .btn-add {
+    font-family: var(--font-button);
+    background-color: var(--btn-bg);
+    color: var(--btn-color);
+    border: none;
+    padding: var(--btn-padding);
+    font-size: var(--btn-font-size);
+    border-radius: var(--btn-radius);
+    transition: background-color var(--transition-fast);
+  }
+  .btn-add:hover {
+    background-color: var(--btn-hover-bg);
+  }
+  
+  /* — Combo Card — */
+  .combo-card {
+    border: 2px solid var(--color-burger-primary);
+    position: relative;
+  }
+  .combo-badge {
+    position: absolute;
+    top: var(--spacing-sm);
+    right: var(--spacing-sm);
+    background-color: var(--color-burger-primary);
+    color: #fff;
+    padding: 0.3rem 0.6rem;
+    font-size: var(--font-size-xs);
+    font-weight: bold;
+    border-radius: var(--radius-pill);
+    z-index: 10;
+  }
+  
+
+  /* ==================== Responsividade ==================== */
+
+/* Para telas maiores que 1024px */
+@media (min-width: 1024px) {
+    #cardapio-categorias .nav-tabs {
+      border-bottom: 2px solid var(--color-burger-border);
+    }
+  
+    .card-img-top {
+      height: 200px;
+    }
+  
+    .produto-card {
+      margin-bottom: var(--spacing-lg);
+    }
+  }
+  
+  /* Para telas menores que 1024px e maiores que 768px (Tablets) */
+  @media (max-width: 1024px) and (min-width: 768px) {
+    #cardapio-categorias .nav-tabs {
+      font-size: var(--font-size-md);
+    }
+  
+    .produto-card {
+      margin-bottom: var(--spacing-md);
+    }
+  
+    .card-img-top {
+      height: 150px;
+    }
+  
+    .nav-tabs {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+  
+  /* Para telas menores que 768px (Mobile - Retrato) */
+  @media (max-width: 768px) {
+    #cardapio-categorias .nav-tabs {
+      flex-direction: column;
+      align-items: flex-start;
+      border-bottom: none;
+      margin-bottom: var(--spacing-md);
+    }
+  
+    .nav-link {
+      padding: var(--spacing-sm) var(--spacing-lg);
+      font-size: var(--font-size-sm);
+    }
+  
+    .tab-content {
+      margin-top: var(--spacing-md);
+    }
+  
+    .produto-card {
+      margin-bottom: var(--spacing-sm);
+    }
+  
+    .card-img-top {
+      height: 120px;
+    }
+  
+    .produto-card .card-body {
+      padding: var(--spacing-sm);
+    }
+  }
+  
+  /* Para telas menores que 425px (Mobile - Paisagem) */
+  @media (max-width: 425px) {
+    .nav-tabs {
+      font-size: var(--font-size-xs);
+    }
+  
+    .produto-card {
+      margin-bottom: var(--spacing-xs);
+    }
+  
+    .card-img-top {
+      height: 100px;
+    }
+  
+    .btn-add {
+      font-size: var(--btn-font-size-small);
+    }
+  
+    .card-body {
+      padding: var(--spacing-xs);
+    }
+  }
+  
+  /* Para telas menores que 320px (Mobile - Extra Pequeno) */
+  @media (max-width: 320px) {
+    .nav-tabs {
+      font-size: var(--font-size-xs);
+      text-align: center;
+    }
+  
+    .produto-card {
+      margin-bottom: var(--spacing-xs);
+    }
+  
+    .card-img-top {
+      height: 90px;
+    }
+  
+    .btn-add {
+      font-size: var(--btn-font-size-small);
+    }
+  }
+  

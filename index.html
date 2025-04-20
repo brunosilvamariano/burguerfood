@@ -94,7 +94,7 @@
                     <li class="nav-item dropdown mb-2">
                         <a class="nav-link dropdown-toggle" href="#" id="cardapioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cardápio</a>
                             <ul class="dropdown-menu" aria-labelledby="cardapioDropdown">
-                            <li><a class="dropdown-item" href="#">Clássicos</a></li>
+                            <li><a class="dropdown-item" href="#">Destaque</a></li>
                             <li><a class="dropdown-item" href="#">Especiais</a></li>
                             <li><a class="dropdown-item" href="#">Acompanhamentos</a></li>
                             <li><a class="dropdown-item" href="#">Bebidas</a></li>
@@ -120,6 +120,7 @@
             </div>
         </nav>
     </header>
+
     <main class="pt-5 mt-5">
         <!-- ================================
              🍔 SEÇÃO HERO (INTRODUÇÃO)
@@ -181,7 +182,6 @@
             </div>
         </section>
 
-     
         <!-- ======================= INFO DO ESTABELECIMENTO ======================= -->
         <section id="infoEstab" class="estab-info container my-4">
             <div class="estab-card rounded-4 p-4 shadow-sm">
@@ -215,13 +215,13 @@
         
                 <!-- Frete grátis + Mais informações -->
                 <div class="d-flex flex-column flex-md-row align-items-start align-items-md-center justify-content-between gap-3">
-                    <div class="badge text-bg-success px-3 py-1 rounded-pill fw-semibold" style="font-size:0.85rem;">
+                    <div class="badge px-3 py-1 rounded-pill fw-semibold">
                         🏷 Frete grátis acima de R$ 100
                     </div>
         
                     <div class="mais-info d-flex justify-content-around">                   <!-- Lista de links para os modais -->
                         <div class="info-links mt-4">
-                            <ul class="info-links-list d-flex justify-content-around flex-wrap gap-1">
+                            <ul class="info-links-list d-flex justify-content-around flex-wrap gap-4">
                                 <li>
                                     <button class="info-link" data-bs-toggle="modal" data-bs-target="#paymentModal">
                                         <i class="bi bi-credit-card"></i> Formas de pagamento
@@ -375,62 +375,635 @@
             </div>
         </div>
         
-  
-        <!-- ======================= DESTAQUES DO CARDÁPIO ======================= -->
-        <section class="destaques-section container py-5">
-        <div class="text-center mb-5">
-        <h2 class="section-title">🍟 Nossos Destaques</h2>
-        <p class="section-subtitle">Sabores que conquistam do primeiro ao último pedaço.</p>
-        </div>
-    
-        <div class="row g-4">
-    
-        <!-- Item 1 -->
-        <div class="col-md-4">
-            <div class="card card-produto h-100 text-center shadow-sm rounded-4">
-            <img src="/images/produtos/classico.jpg" class="card-img-top" alt="Hambúrguer Clássico">
-            <div class="card-body">
-                <h5 class="card-title">Burger Clássico</h5>
-                <p class="card-text">Pão artesanal, carne 180g, queijo cheddar e molho especial.</p>
-                <a href="#" class="btn btn-outline-primary">Pedir Agora</a>
+        
+        <section id="cardapio-destaques" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-4">Destaques do Cardápio</h2>
+                <div class="row g-4">
+                    <!-- Clássico -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card produto-card h-100">
+                            <img src="./images/banner/classico.jpg" class="card-img-top" alt="Burger Clássico">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Burger Clássico</h5>
+                                <p class="card-text flex-grow-1">
+                                    Pão brioche, 160g de carne, queijo e molho especial.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="preco">R$ 24,90</span>
+                                    <button class="btn btn-add" onclick="adicionarAoCarrinho('Burger Clássico', 24.90)">
+                                    Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          
+                    <!-- Especial -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card produto-card h-100">
+                            <img src="./images/banner/especial.jpg" class="card-img-top" alt="Burger Especial">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Burger Especial</h5>
+                                <p class="card-text flex-grow-1">
+                                    Duplo smash, cheddar cremoso, bacon crocante e molho da casa.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="preco">R$ 32,90</span>
+                                    <button class="btn btn-add" onclick="adicionarAoCarrinho('Burger Especial', 32.90)">
+                                    Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+          
+                    <!-- Combo -->
+                    <div class="col-sm-6 col-md-4">
+                        <div class="card produto-card combo-card h-100 position-relative">
+                            <span class="combo-badge">Combo</span>
+                            <img src="./images/banner/combo.jpg" class="card-img-top" alt="Combo Burger">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title">Combo Completo</h5>
+                                <p class="card-text flex-grow-1">
+                                    Burger Clássico + Batata frita + Refrigerante 350ml.
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span class="preco">R$ 39,90</span>
+                                    <button class="btn btn-add" onclick="adicionarAoCarrinho('Combo Completo', 39.90)">
+                                    Adicionar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
-    
-        <!-- Item 2 -->
-        <div class="col-md-4">
-            <div class="card card-produto h-100 text-center shadow-sm rounded-4">
-            <img src="/images/produtos/bacon.jpg" class="card-img-top" alt="Burger Bacon Supreme">
-            <div class="card-body">
-                <h5 class="card-title">Bacon Supreme</h5>
-                <p class="card-text">Duas carnes, muito bacon, cheddar derretido e cebola crispy.</p>
-                <a href="#" class="btn btn-outline-primary">Pedir Agora</a>
-            </div>
-            </div>
-        </div>
-    
-        <!-- Item 3 -->
-        <div class="col-md-4">
-            <div class="card card-produto h-100 text-center shadow-sm rounded-4">
-            <img src="/images/produtos/veggie.jpg" class="card-img-top" alt="Burger Veggie">
-            <div class="card-body">
-                <h5 class="card-title">Burger Veggie</h5>
-                <p class="card-text">Hambúrguer vegetal, mix de folhas e molho leve da casa.</p>
-                <a href="#" class="btn btn-outline-primary">Pedir Agora</a>
-            </div>
-            </div>
-        </div>
-    
-        </div>
         </section>
-  
+
+        <section id="cardapio-categorias" class="py-5">
+            <div class="container">
+                <h2 class="section-title text-center mb-4">Categorias do Cardápio</h2>
+          
+                <!-- Nav Tabs -->
+                <ul class="nav nav-tabs justify-content-center" id="menuTabs" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link active" id="hamburgueres-tab" data-bs-toggle="tab" href="#hamburgueres" role="tab" aria-controls="hamburgueres" aria-selected="true">Hambúrgueres</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="acompanhamentos-tab" data-bs-toggle="tab" href="#acompanhamentos" role="tab" aria-controls="acompanhamentos" aria-selected="false">Acompanhamentos</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="bebidas-tab" data-bs-toggle="tab" href="#bebidas" role="tab" aria-controls="bebidas" aria-selected="false">Bebidas</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="combos-tab" data-bs-toggle="tab" href="#combos" role="tab" aria-controls="combos" aria-selected="false">Combos</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <a class="nav-link" id="sobremesas-tab" data-bs-toggle="tab" href="#sobremesas" role="tab" aria-controls="sobremesas" aria-selected="false">Sobremesas</a>
+                    </li>
+                </ul>
+          
+                <!-- Tab Content -->
+                <div class="tab-content mt-4" id="menuTabsContent">
+                    <!-- Hambúrgueres -->
+                    <div class="tab-pane fade show active" id="hamburgueres" role="tabpanel" aria-labelledby="hamburgueres-tab">
+                        <div class="row g-4">
+                            <!-- Exemplo de Card para Hambúrguer -->
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Burger Clássico">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Burger Clássico</h5>
+                                        <p class="card-text flex-grow-1">
+                                            Pão brioche, 160g de carne, queijo e molho especial.
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 24,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Burger Clássico', 24.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Hambúrguer -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Burger Clássico">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Burger Clássico</h5>
+                                        <p class="card-text flex-grow-1">
+                                            Pão brioche, 160g de carne, queijo e molho especial.
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 24,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Burger Clássico', 24.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                              <!-- Exemplo de Card para Hambúrguer -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Burger Clássico">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Burger Clássico</h5>
+                                        <p class="card-text flex-grow-1">
+                                            Pão brioche, 160g de carne, queijo e molho especial.
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 24,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Burger Clássico', 24.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                              <!-- Exemplo de Card para Hambúrguer -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Burger Clássico">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Burger Clássico</h5>
+                                        <p class="card-text flex-grow-1">
+                                            Pão brioche, 160g de carne, queijo e molho especial.
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 24,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Burger Clássico', 24.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                              <!-- Exemplo de Card para Hambúrguer -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Burger Clássico">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Burger Clássico</h5>
+                                        <p class="card-text flex-grow-1">
+                                            Pão brioche, 160g de carne, queijo e molho especial.
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 24,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Burger Clássico', 24.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                              <!-- Exemplo de Card para Hambúrguer -->
+                              <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Burger Clássico">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Burger Clássico</h5>
+                                        <p class="card-text flex-grow-1">
+                                            Pão brioche, 160g de carne, queijo e molho especial.
+                                        </p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 24,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Burger Clássico', 24.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Acompanhamentos -->
+                    <div class="tab-pane fade" id="acompanhamentos" role="tabpanel" aria-labelledby="acompanhamentos-tab">
+                        <div class="row g-4">
+                            <!-- Exemplo de Card para Acompanhamento -->
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Batata Frita">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Batata Frita</h5>
+                                        <p class="card-text flex-grow-1">Crocante e dourada, servida com ketchup e maionese.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 12,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Batata Frita', 12.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Acompanhamento -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Batata Frita">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Batata Frita</h5>
+                                        <p class="card-text flex-grow-1">Crocante e dourada, servida com ketchup e maionese.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 12,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Batata Frita', 12.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Acompanhamento -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Batata Frita">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Batata Frita</h5>
+                                        <p class="card-text flex-grow-1">Crocante e dourada, servida com ketchup e maionese.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 12,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Batata Frita', 12.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Acompanhamento -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Batata Frita">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Batata Frita</h5>
+                                        <p class="card-text flex-grow-1">Crocante e dourada, servida com ketchup e maionese.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 12,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Batata Frita', 12.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Acompanhamento -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Batata Frita">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Batata Frita</h5>
+                                        <p class="card-text flex-grow-1">Crocante e dourada, servida com ketchup e maionese.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 12,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Batata Frita', 12.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Acompanhamento -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Batata Frita">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Batata Frita</h5>
+                                        <p class="card-text flex-grow-1">Crocante e dourada, servida com ketchup e maionese.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 12,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Batata Frita', 12.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Bebidas -->
+                    <div class="tab-pane fade" id="bebidas" role="tabpanel" aria-labelledby="bebidas-tab">
+                        <div class="row g-4">
+                            <!-- Exemplo de Card para Bebida -->
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Refrigerante">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Refrigerante</h5>
+                                        <p class="card-text flex-grow-1">Refrigerante 350ml, disponível nos sabores cola e guaraná.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 7,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Refrigerante', 7.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Bebida -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Refrigerante">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Refrigerante</h5>
+                                        <p class="card-text flex-grow-1">Refrigerante 350ml, disponível nos sabores cola e guaraná.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 7,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Refrigerante', 7.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Bebida -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Refrigerante">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Refrigerante</h5>
+                                        <p class="card-text flex-grow-1">Refrigerante 350ml, disponível nos sabores cola e guaraná.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 7,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Refrigerante', 7.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Bebida -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Refrigerante">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Refrigerante</h5>
+                                        <p class="card-text flex-grow-1">Refrigerante 350ml, disponível nos sabores cola e guaraná.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 7,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Refrigerante', 7.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Bebida -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Refrigerante">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Refrigerante</h5>
+                                        <p class="card-text flex-grow-1">Refrigerante 350ml, disponível nos sabores cola e guaraná.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 7,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Refrigerante', 7.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Bebida -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Refrigerante">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Refrigerante</h5>
+                                        <p class="card-text flex-grow-1">Refrigerante 350ml, disponível nos sabores cola e guaraná.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 7,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Refrigerante', 7.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Combos -->
+                    <div class="tab-pane fade" id="combos" role="tabpanel" aria-labelledby="combos-tab">
+                        <div class="row g-4">
+                            <!-- Exemplo de Card para Combo -->
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card combo-card h-100 position-relative">
+                                    <span class="combo-badge">Combo</span>
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Combo Completo">
+                                        <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Combo Completo</h5>
+                                        <p class="card-text flex-grow-1">Burger Clássico + Batata frita + Refrigerante 350ml.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 39,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Combo Completo', 39.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Combo -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card combo-card h-100 position-relative">
+                                    <span class="combo-badge">Combo</span>
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Combo Completo">
+                                        <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Combo Completo</h5>
+                                        <p class="card-text flex-grow-1">Burger Clássico + Batata frita + Refrigerante 350ml.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 39,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Combo Completo', 39.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Combo -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card combo-card h-100 position-relative">
+                                    <span class="combo-badge">Combo</span>
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Combo Completo">
+                                        <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Combo Completo</h5>
+                                        <p class="card-text flex-grow-1">Burger Clássico + Batata frita + Refrigerante 350ml.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 39,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Combo Completo', 39.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Combo -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card combo-card h-100 position-relative">
+                                    <span class="combo-badge">Combo</span>
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Combo Completo">
+                                        <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Combo Completo</h5>
+                                        <p class="card-text flex-grow-1">Burger Clássico + Batata frita + Refrigerante 350ml.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 39,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Combo Completo', 39.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Combo -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card combo-card h-100 position-relative">
+                                    <span class="combo-badge">Combo</span>
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Combo Completo">
+                                        <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Combo Completo</h5>
+                                        <p class="card-text flex-grow-1">Burger Clássico + Batata frita + Refrigerante 350ml.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 39,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Combo Completo', 39.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Combo -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card combo-card h-100 position-relative">
+                                    <span class="combo-badge">Combo</span>
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Combo Completo">
+                                        <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Combo Completo</h5>
+                                        <p class="card-text flex-grow-1">Burger Clássico + Batata frita + Refrigerante 350ml.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 39,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Combo Completo', 39.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Sobremesas -->
+                    <div class="tab-pane fade" id="sobremesas" role="tabpanel" aria-labelledby="sobremesas-tab">
+                        <div class="row g-4">
+                            <!-- Exemplo de Card para Sobremesa -->
+                            <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Sobremesa">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Torta de Limão</h5>
+                                        <p class="card-text flex-grow-1">Deliciosa torta de limão com chantilly fresco.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 14,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Torta de Limão', 14.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Sobremesa -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Sobremesa">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Torta de Limão</h5>
+                                        <p class="card-text flex-grow-1">Deliciosa torta de limão com chantilly fresco.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 14,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Torta de Limão', 14.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Sobremesa -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Sobremesa">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Torta de Limão</h5>
+                                        <p class="card-text flex-grow-1">Deliciosa torta de limão com chantilly fresco.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 14,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Torta de Limão', 14.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Sobremesa -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Sobremesa">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Torta de Limão</h5>
+                                        <p class="card-text flex-grow-1">Deliciosa torta de limão com chantilly fresco.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 14,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Torta de Limão', 14.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Sobremesa -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Sobremesa">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Torta de Limão</h5>
+                                        <p class="card-text flex-grow-1">Deliciosa torta de limão com chantilly fresco.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 14,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Torta de Limão', 14.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                             <!-- Exemplo de Card para Sobremesa -->
+                             <div class="col-sm-6 col-md-4">
+                                <div class="card produto-card h-100">
+                                    <img src="./images/banner/classico.jpg" class="card-img-top" alt="Sobremesa">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title">Torta de Limão</h5>
+                                        <p class="card-text flex-grow-1">Deliciosa torta de limão com chantilly fresco.</p>
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <span class="preco">R$ 14,90</span>
+                                            <button class="btn btn-add" onclick="adicionarAoCarrinho('Torta de Limão', 14.90)">
+                                            Adicionar
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </section>
+          
     </main>
     
 
-  <!-- ======================= RODAPÉ ======================= -->
-  <footer class="text-center py-4 mt-5" style="background-color: var(--cor-navbar);">
-    <p class="mb-0">&copy; 2025 BurgerPro. Todos os direitos reservados.</p>
-  </footer>
+    <!-- ======================= RODAPÉ ======================= -->
+    <footer class="text-center py-4 mt-5" style="background-color: var(--cor-navbar);">
+        <p class="mb-0">&copy; 2025 BurgerPro. Todos os direitos reservados.</p>
+    </footer>
 
   <!-- ======================= SCRIPTS ======================= -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
