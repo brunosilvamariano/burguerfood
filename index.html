@@ -40,49 +40,78 @@
     </head>
 <body style="background: var(--color-burger-nav);">
 
-    <!-- =======================
-        HEADER / NAVBAR FIXO
-    =========================== -->
     <header>
         <!-- NAVBAR SUPERIOR FIXA -->
         <nav class="navbar fixed-top shadow-sm">
             <div class="container d-flex justify-content-between align-items-center">
         
                 <!-- Logotipo -->
-                <a class="navbar-brand d-flex align-items-center" href="#">
+                <a class="navbar-brand d-flex align-items-center" href="#" aria-label="Página inicial">
                     <img src="/images/logo/logo.svg" alt="Logotipo da BurgerPro" class="me-2" id="logo">
                 </a>
         
-                <!-- Botão Hamburguer (visível apenas no mobile) -->
-                <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menu">
-                    <span class="navbar-toggler-icon"></span>
+            
+                <!-- Botão Hamburguer (visível também em desktop) -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-controls="offcanvasMenu" aria-label="Abrir menu">
+                    <div class="hamburger-icon">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
                 </button>
-        
             </div>
         </nav>
+        
         <!-- =======================
             MENU OFFCANVAS MOBILE
         ============================ -->
         <nav class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-    
+        
             <!-- Cabeçalho do Offcanvas -->
             <div class="offcanvas-header">
-                <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu BurgerPro</h5>
+                <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu Delicius</h5>
                 <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Fechar"></button>
             </div>
-    
+        
             <!-- Corpo do Offcanvas -->
             <div class="offcanvas-body">
         
-                <!-- 🔍 Barra de busca dentro do menu -->
-                <form class="search-bar d-flex align-items-center mb-3" role="search">
-                    <div class="search-wrapper w-100">
-                        <input type="search" class="form-control" id="searchInput" placeholder="Buscar no cardápio..." aria-label="Buscar">
-                        <button class="btn-search" type="submit">
-                            <i class="bi bi-search" id="searchIcon"></i>
-                        </button>
+                <form id="searchForm" class="search-bar d-flex align-items-center mb-3" role="search">
+                    <div class="search-wrapper w-100 position-relative">
+                      <!-- 1) Input de busca -->
+                      <input
+                        type="search"
+                        id="searchInput"
+                        class="form-control"
+                        placeholder="Buscar no cardápio..."
+                        aria-label="Buscar"
+                      >
+                  
+                      <!-- 2) Ícone de X para limpar (inicialmente escondido) -->
+                      <button
+                        id="clearBtn"
+                        type="button"
+                        class="position-absolute top-50 end-0 translate-middle-y me-4"
+                        style="display: none; border: none; background: none;"
+                        aria-label="Limpar busca"
+                      >
+                        <i class="bi bi-x-lg"></i>
+                      </button>
+                  
+                      <!-- 3) Botão de enviar (lupa) -->
+                      <button
+                        id="searchBtn"
+                        type="submit"
+                        class="position-absolute top-50 end-0 translate-middle-y me-2"
+                        aria-label="Pesquisar"
+                      >
+                        <i class="bi bi-search" id="searchIcon"></i>
+                      </button>
                     </div>
-                </form>
+                  </form>
+                  
+                  <div id="searchResults" class="row mt-3"></div>
+                  <!-- Aqui vão aparecer os produtos encontrados -->
         
                 <!-- 📋 Lista de links do menu -->
                 <ul class="navbar-nav">
@@ -94,7 +123,7 @@
                     <li class="nav-item dropdown mb-2">
                         <a class="nav-link dropdown-toggle" href="#" id="cardapioDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Cardápio</a>
                             <ul class="dropdown-menu" aria-labelledby="cardapioDropdown">
-                            <li><a class="dropdown-item" href="#">Destaque</a></li>
+                            <li><a class="dropdown-item" href="#cardapio-destaques">Destaque</a></li>
                             <li><a class="dropdown-item" href="#">Especiais</a></li>
                             <li><a class="dropdown-item" href="#">Acompanhamentos</a></li>
                             <li><a class="dropdown-item" href="#">Bebidas</a></li>
@@ -120,6 +149,7 @@
             </div>
         </nav>
     </header>
+    
 
     <main class="pt-5 mt-5">
         <!-- ================================
@@ -134,7 +164,7 @@
                 <aside class="col-md-4 text-center text-md-start px-4">
                     <!-- Título e slogan -->
                     <div class="mb-4">
-                        <h1 class="mb-3 burguer">🍔 BurgerPro</h1>
+                        <h1 class="mb-3 burguer">🍔 Delicius</h1>
                         <p class="lead">O verdadeiro sabor artesanal entregue com carinho.</p>
                     </div>
     
@@ -463,7 +493,6 @@
                         <a class="nav-link" id="sobremesas-tab" data-bs-toggle="tab" href="#sobremesas" role="tab" aria-controls="sobremesas" aria-selected="false">Sobremesas</a>
                     </li>
                 </ul>
-          
                 <!-- Tab Content -->
                 <div class="tab-content mt-4" id="menuTabsContent">
                     <!-- Hambúrgueres -->
@@ -996,19 +1025,62 @@
                 </div>
             </div>
           </section>
-          
     </main>
-    
-
     <!-- ======================= RODAPÉ ======================= -->
-    <footer class="text-center py-4 mt-5" style="background-color: var(--cor-navbar);">
-        <p class="mb-0">&copy; 2025 BurgerPro. Todos os direitos reservados.</p>
-    </footer>
-
+    <footer class="site-footer py-5">
+        <div class="container">
+          <div class="row gy-4">
+            <!-- Logo e Descrição -->
+            <div class="col-md-4">
+              <h4 class="footer-logo">BurgerHouse</h4>
+              <p class="footer-text">O melhor da sua cidade, direto no seu lanche!</p>
+            </div>
+      
+            <!-- Links Úteis -->
+            <div class="col-6 col-md-2">
+              <h5 class="footer-title">Links</h5>
+              <ul class="list-unstyled">
+                <li><a href="#">Cardápio</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Contato</a></li>
+              </ul>
+            </div>
+      
+            <!-- Informações -->
+            <div class="col-6 col-md-3">
+              <h5 class="footer-title">Atendimento</h5>
+              <p class="footer-text">Rua Saborosa, 123<br>Centro, SP</p>
+              <p class="footer-text">📞 (11) 98765-4321</p>
+              <p class="footer-text">🕒 18h - 23h</p>
+            </div>
+      
+            <!-- Redes Sociais -->
+            <div class="col-md-3 text-md-end">
+              <h5 class="footer-title">Siga-nos</h5>
+              <div class="d-flex justify-content-md-end gap-3">
+                <a href="#" class="social-icon instagram" aria-label="Instagram">
+                  <i class="bi bi-instagram"></i>
+                </a>
+                <a href="#" class="social-icon whatsapp" aria-label="WhatsApp">
+                  <i class="bi bi-whatsapp"></i>
+                </a>
+                <a href="#" class="social-icon facebook" aria-label="Facebook">
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer-copy text-center mt-4">
+            <p>Desenvolvido por <strong>Bruno Silva</strong> | Design por <strong>Thaynar Ingrid</strong></p>
+          </div>
+      </footer>
+      
   <!-- ======================= SCRIPTS ======================= -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/search.js"></script>
   <script src="js/info-estab.js"></script>
 </body>
 </html>

@@ -1,102 +1,105 @@
 :root {
-  /* ——————————————————————————————————————————
-     🎨 CORES
-     —————————————————————————————————————————— */
-  /* Tema Hamburgueria */
-  --color-burger-primary:        #f68b1e;
-  --color-burger-secondary:      #ff9d5c;
-  --color-burger-text:           #212529;
-  --color-burger-bg:             #f4f4f4;
-  --color-burger-nav:           #f4f4f4;
-  --color-burger-body:           #4b4b4b;
-
-  /* Extras: rodapé, bordas, botões, alertas */
-  --color-burger-footer-bg:      #333333;
-  --color-burger-border:         #d1d1d1;
-  --color-burger-button-bg:      #ff7f32;
-  --color-burger-button-hover:   #e56b23;
-  --color-burger-title:          #1e1e1e;
-  --color-burger-subtitle:       #666666;
-
-  --color-burger-text-default: #f5a661; /* Laranja suave para o texto normal */
-
-  --color-success:               #198754;
-  --color-error:                 #dc3545;
-  --color-warning:               #ffc107;
-
-  --color-border:                #dee2e6;
-  --box-shadow-light:            0 1px 3px rgba(0,0,0,0.1);
-  --box-shadow-dark:             0 2px 10px rgba(0,0,0,0.2);
-
-  --color-bg-alt:                #e1e1e1;
-
-    /* ——————————————————————————————————————————
-     🛰️ ICONE SOCIAL
-     —————————————————————————————————————————— */
-     --social-icon-size:           1.6rem;
-     --social-icon-padding:        var(--spacing-sm);     /* 0.6rem */
-     --social-icon-blur:           4px;
-     --social-icon-color:          rgba(0, 0, 0, 0.5);
-   
-     /* Cores oficiais das redes sociais */
-     --color-social-facebook:      #1877f2;
-     --color-social-instagram:     #e1306c;
-     --color-social-whatsapp:      #25d366;
-
-  /* ——————————————————————————————————————————
-     🖋️ TIPOGRAFIA
-     —————————————————————————————————————————— */
-  --font-title:                  'Playfair Display', serif;
-  --font-body:                   'Inter', sans-serif;
-  --font-button:                 'Montserrat', sans-serif;
-
-  --font-size-xs:                0.75rem;
-  --font-size-sm:                0.875rem;
-  --font-size-base:              1rem;
-  --font-size-lg:                1.25rem;
-  --font-size-xl:                1.5rem;
-  --font-size-xxl:               2rem;
-
-
-  /* ——————————————————————————————————————————
-     🧮 ESPAÇAMENTO & RADIUS
-     —————————————————————————————————————————— */
-  --spacing-xs:                  0.25rem;
-  --spacing-sm:                  0.5rem;
-  --spacing-md:                  1rem;
-  --spacing-lg:                  2rem;
-  --spacing-xl:                  4rem;
-
-  --radius-sm:                   0.25rem;
-  --radius-md:                   0.5rem;
-  --radius-lg:                   1rem;
-  --radius-pill:                 50rem;
-
-
-  /* ——————————————————————————————————————————
-     🔘 BOTÕES
-     —————————————————————————————————————————— */
-  --btn-padding:                 0.6rem 1.2rem;
-  --btn-font-size:               var(--font-size-sm);
-  --btn-color:                   #fff;
-  --btn-bg:                      var(--color-burger-primary);
-  --btn-hover-bg:                var(--color-burger-button-hover);
-  --btn-radius:                  var(--radius-pill);
-
-
-  /* ——————————————————————————————————————————
-     ✨ TRANSIÇÕES & ANIMAÇÕES
-     —————————————————————————————————————————— */
-  --transition-fast:             0.2s ease-in-out;
-  --transition-medium:           0.4s ease;
-  --transition-slow:             0.8s ease;
-
-  --hover-lift:                  translateY(-4px);
-  --hover-scale:                 scale(1.05);
-
-
-  /* ——————————————————————————————————————————
-     🛰️ DEMAIS
-     —————————————————————————————————————————— */
-  /* (ex: breakpoints, z-indexes, etc.) */
-}
+   /* ——————————————————————————————————————————
+      🎨 CORES
+      —————————————————————————————————————————— */
+   /* Tema Hamburgueria */
+   --color-burger-primary:        #f68b1e;
+   --color-burger-secondary:      #ff9d5c;
+   --color-burger-text:           #212529;
+   --color-burger-bg:             #f4f4f4;
+   --color-burger-nav-bg:         #f4f4f4;  /* Alterado para nav-bg */
+   --color-burger-body:           #4b4b4b;
+ 
+   /* Extras: rodapé, bordas, botões, alertas */
+   --color-burger-footer-bg:      #333333;
+   --color-burger-border:         #d1d1d1;
+   --color-burger-button-bg:      #ff7f32;
+   --color-burger-button-hover:   #e56b23;
+   --color-burger-title:          #1e1e1e;
+   --color-burger-subtitle:       #666666;
+ 
+   --color-burger-text-normal:    #f5a661; /* Renomeado para texto normal */
+ 
+   --color-success:               #198754;
+   --color-error:                 #dc3545;
+   --color-warning:               #ffc107;
+ 
+   --color-border:                #dee2e6;
+   --box-shadow-light:            0 1px 3px rgba(0,0,0,0.1);
+   --box-shadow-dark:             0 2px 10px rgba(0,0,0,0.2);
+   --box-shadow-light-hover:      0 4px 12px rgba(0,0,0,0.1); /* Nova sombra para hover */
+ 
+   --color-bg-alt:                #e1e1e1;
+ 
+   /* ——————————————————————————————————————————
+      🛰️ ICONE SOCIAL
+      —————————————————————————————————————————— */
+   --social-icon-size:           1.6rem;
+   --social-icon-padding:        var(--spacing-sm);     /* 0.6rem */
+   --social-icon-blur:           4px;
+   --social-icon-color:          rgba(0, 0, 0, 0.5);
+ 
+   /* Cores oficiais das redes sociais */
+   --color-social-facebook:      #1877f2;
+   --color-social-instagram:     #e1306c;
+   --color-social-whatsapp:      #25d366;
+ 
+   /* ——————————————————————————————————————————
+      🖋️ TIPOGRAFIA
+      —————————————————————————————————————————— */
+   --font-title:                  'Playfair Display', serif;
+   --font-body:                   'Inter', sans-serif;
+   --font-button:                 'Montserrat', sans-serif;
+ 
+   --font-size-xs:                0.75rem;
+   --font-size-sm:                0.875rem;
+   --font-size-base:              1rem;
+   --font-size-lg:                1.25rem;
+   --font-size-xl:                1.5rem;
+   --font-size-xxl:               2rem;
+ 
+   /* ——————————————————————————————————————————
+      🧮 ESPAÇAMENTO & RADIUS
+      —————————————————————————————————————————— */
+   --spacing-xs:                  0.25rem;
+   --spacing-sm:                  0.5rem;
+   --spacing-md:                  1rem;
+   --spacing-lg:                  2rem;
+   --spacing-xl:                  4rem;
+ 
+   --radius-sm:                   0.25rem;
+   --radius-md:                   0.5rem;
+   --radius-lg:                   1rem;
+   --radius-pill:                 50rem;
+ 
+   /* ——————————————————————————————————————————
+      🔘 BOTÕES
+      —————————————————————————————————————————— */
+   --btn-padding:                 0.6rem 1.2rem;
+   --btn-font-size:               var(--font-size-sm);
+   --btn-color:                   #fff;
+   --btn-bg:                      var(--color-burger-primary);
+   --btn-hover-bg:                var(--color-burger-button-hover);
+   --btn-radius:                  var(--radius-pill);
+ 
+   /* ——————————————————————————————————————————
+      ✨ TRANSIÇÕES & ANIMAÇÕES
+      —————————————————————————————————————————— */
+   --transition-fast:             0.2s ease-in-out;
+   --transition-medium:           0.4s ease;
+   --transition-slow:             0.8s ease;
+ 
+   --hover-lift:                  translateY(-4px);
+   --hover-scale:                 scale(1.05);
+ 
+   /* ——————————————————————————————————————————
+      🛰️ DEMAIS
+      —————————————————————————————————————————— */
+   /* Breakpoints */
+   --breakpoint-sm:               576px;
+   --breakpoint-md:               768px;
+   --breakpoint-lg:               992px;
+   --breakpoint-xl:               1200px;
+   --breakpoint-xxl:              1440px;
+ }
+ 

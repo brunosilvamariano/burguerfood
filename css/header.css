@@ -2,10 +2,10 @@
    🧠 HEADER & NAVBAR
 ================================== */
 header nav {
-  background: var(--color-burger-nav);
+  background: var(--color-burger-nav-bg);
 }
 
-/* Estilo para o título e o parágrafo */
+/* Estilo para o título e o parágrafo no header */
 header h1 {
   font-size: var(--font-size-xxl); /* 2.5rem */
   font-weight: 700;
@@ -22,4 +22,131 @@ header p {
   margin-top: var(--spacing-sm);
   font-style: italic;
   font-family: var(--font-body);
+}
+
+/* Remover o fundo e borda padrão do botão hamburguer */
+.navbar-toggler {
+  border: none;
+  background: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px; /* Ajuste a altura do botão */
+}
+
+/* Estilo do ícone hamburguer */
+.hamburger-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px; /* Ajuste a largura do ícone */
+  height: 18px; /* Altura total do ícone (espaço entre os traços) */
+}
+
+/* Estilo para cada linha */
+.line {
+  height: 4px; /* Altura dos traços */
+  background-color: var(--color-burger-primary); /* Cor dos traços */
+  border-radius: 2px; /* Bordas arredondadas para os traços */
+  width: 100%;
+}
+
+/* Remover a borda e o contorno ao clicar no botão hamburguer */
+.navbar-toggler:focus {
+  outline: none;  /* Remove o contorno */
+  box-shadow: none; /* Remove a sombra */
+}
+
+/* Remover a borda e o fundo ao clicar no botão hamburguer */
+.navbar-toggler:active {
+  border: none; /* Remove a borda */
+  background: none; /* Remove o fundo */
+}
+
+/* ================================
+   🔍 SEARCH BAR
+================================== */
+
+
+
+
+/* Ícone de lupa (botão de pesquisa) */
+.btn-search {
+  position: absolute;
+  right: var(--spacing-sm); /* 0.5rem */
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  background: none;
+  color: var(--color-burger-primary);
+  font-size: var(--font-size-lg); /* 1.25rem */
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.search-bar .btn-search:hover {
+  color: var(--btn-hover-bg);
+}
+
+/* Ícone "X" para limpar */
+#clearBtn {
+  display: none;
+  position: absolute;
+  right: var(--spacing-md); /* 10px */
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-base);
+  color: #999;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+#clearBtn:hover {
+  color: var(--color-burger-title);
+}
+
+/* Ícone de busca (representação visual do ícone) */
+#searchIcon {
+  display: block;
+}
+
+/* ================================
+   🔄 RESPONSIVO
+================================== */
+@media (max-width: 768px) {
+  .search-bar {
+    max-width: 300px;
+  }
+}
+
+/* ================================
+   🧭 MENU OFFCANVAS
+================================== */
+.offcanvas {
+  background-color: #fff;
+  color: var(--color-burger-text);
+  font-family: var(--font-body);
+}
+
+.offcanvas-title {
+  font-family: var(--font-title);
+  color: var(--color-burger-title);
+}
+
+.nav-link {
+  color: var(--color-burger-text);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: var(--color-burger-primary);
+}
+
+.badge {
+  font-size: var(--font-size-xs); /* 0.75rem */
+  padding: var(--spacing-xs) var(--spacing-sm); /* 0.25rem 0.5rem */
+  border-radius: var(--radius-pill);
 }
